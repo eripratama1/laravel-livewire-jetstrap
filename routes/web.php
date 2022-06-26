@@ -25,4 +25,5 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+    Route::get('/posts',[\App\Http\Livewire\Post::class,'render'])->name('posts');
 });
